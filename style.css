@@ -1,0 +1,40 @@
+@font-face {
+  font-family: Hooey; 
+  src: url("https://github.com/katetriestocode/personalwebsite/blob/main/assets/Hooey-Regular.woff?raw=true"); 
+}
+
+body {
+    background-image: url("https://github.com/katetriestocode/personalwebsite/blob/main/assets/JA%20Jayagiri%20Sans.png?raw=true");
+    background-size: 40vw;
+    background-repeat: repeat;
+    text-align: center;
+    font-family: Hooey;
+    color: white;
+    position: relative; 
+    min-height: 100vh;
+    padding-top: 0vw; 
+}
+
+h1 {
+    font-size: 12vw;
+    padding-top: 0vw;
+    font-family: Hooey;
+}
+
+.split-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw; /* Space between image and text */
+    max-width: 800px; /* Keeps it from getting too wide on big screens */
+    margin: 60px auto; /* Centers the whole block and adds space above/below */
+    padding: 0 20px;
+    text-align: left; /* Overrides the body's center alignment for this section */
+}
+
+.split-text {
+    flex: 1; /* Makes the text take up the remaining space */
+}
+
+
+
