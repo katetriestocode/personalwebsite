@@ -1,6 +1,10 @@
 @font-face {
   font-family: Hooey; 
-  src: url("https://github.com/katetriestocode/personalwebsite/blob/main/assets/Hooey-Regular.woff?raw=true"); 
+  src: url("https://github.com/katetriestocode/personalwebsite/blob/main/Fonts/Hooey-Regular.woff?raw=true"); 
+}
+@font-face {
+  font-family: Archivo; 
+  src: url("https://github.com/katetriestocode/personalwebsite/blob/main/Fonts/Archivo-Light.woff?raw=true"); 
 }
 
 body {
@@ -21,14 +25,28 @@ h1 {
     font-family: Hooey;
 }
 
+.corner-left {
+    left: 2vw;         /* Distance from the left */
+    position: absolute; /* Pins them to the page */
+    top: -4vw;          /* Distance from the top */
+    width: 18vw;        
+}
+
+.corner-right {
+    right: 2vw;        /* Distance from the right */
+    position: absolute; /* Pins them to the page */
+    top: -4vw;          /* Distance from the top */
+    width: 18vw;        
+}
+
 .split-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4vw; /* Space between image and text */
-    max-width: 800px; /* Keeps it from getting too wide on big screens */
-    margin: 60px auto; /* Centers the whole block and adds space above/below */
-    padding: 0 20px;
+    gap: 5vw; /* Space between image and text */
+    max-width: 90vw; /* Keeps it from getting too wide on big screens */
+    margin: 2vw auto; /* Centers the whole block and adds space above/below */
+    padding: 0 8vw;
     text-align: left; /* Overrides the body's center alignment for this section */
 }
 
@@ -37,4 +55,59 @@ h1 {
 }
 
 
+.selfie {
+    width: 25vw;
+    transform: rotate(-10deg);
+    height: auto;
+    pointer-events: none;
+}
 
+h2 {
+    font-size: 8vw;
+    padding-top: 0vw;
+    padding-bottom: 0vw;
+    line-height: 0%;
+    font-family: Hooey;
+    word-spacing: -1.5vw;
+    margin-top: 0;
+    margin-bottom: 4vw;
+}
+
+p1 {
+    font-size: 2.5vw;
+    padding-top: 0vw;
+    padding-bottom: 0vw;
+    line-height: 3vw;
+    font-family: Archivo;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: block;
+    width: 90%;
+}
+
+
+
+.top-block {
+    background-color: white; /* Match this to your SVG color */
+    width: 100%;
+    padding: 20px 0;
+}
+
+.wave-divider {
+    width: 100%;
+    /* Set the height to match the height of your SVG tile */
+    height: 50px; 
+    
+    /* Link your custom SVG here */
+    background-image: url("your-wave-file.svg");
+    
+    /* This makes it repeat forever to the right */
+    background-repeat: repeat-x;
+    
+    /* This controls how wide each 'wave' is. 
+       Adjust this to match your SVG's actual width */
+    background-size: 100px 50px; 
+    
+    /* Ensures it sits perfectly against the header */
+    margin-top: -1px; 
+}
