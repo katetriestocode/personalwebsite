@@ -1,10 +1,12 @@
 @font-face {
-  font-family: Hooey; 
-  src: url("https://github.com/katetriestocode/personalwebsite/blob/main/Fonts/Hooey-Regular.woff?raw=true"); 
+    font-family: Hooey; 
+    src: url("https://cdn.jsdelivr.net/gh/katetriestocode/personalwebsite@main/Fonts/Hooey%20Y2k%20Font-2/WOFF/Hooey-Regular.woff2") format('woff2'), 
+        url("https://cdn.jsdelivr.net/gh/katetriestocode/personalwebsite@main/Fonts/Hooey%20Y2k%20Font-2/WOFF/Hooey-Regular.woff") format('woff');
 }
 @font-face {
   font-family: Archivo; 
-  src: url("https://github.com/katetriestocode/personalwebsite/blob/main/Fonts/Archivo-Light.woff?raw=true"); 
+  src: url("https://cdn.jsdelivr.net/gh/katetriestocode/personalwebsite@main/Fonts/archivo/WEB/fonts/Archivo-Light.woff2") format('woff2'), 
+        url("https://cdn.jsdelivr.net/gh/katetriestocode/personalwebsite@main/Fonts/archivo/WEB/fonts/Archivo-Light.woff") format('woff');
 }
 
 body {
@@ -17,7 +19,93 @@ body {
     position: relative; 
     min-height: 100vh;
     padding-top: 0vw; 
+    background-attachment: fixed; /* This keeps the BG still */
+    margin: 0;
+    overflow-x: hidden;
 }
+
+.top-tab {
+    position: relative; /* Changed from fixed so it scrolls with the page */
+    top: 0;
+    left: 0;
+    background: white;
+    width: 100%;
+    z-index: 1000;
+    height: 60px; /* Solid white part */
+}
+.wave-bottom {
+    position: absolute;
+    top: 100%; /* Places it exactly at the bottom of the white bar */
+    left: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none; /* Makes sure you can click things under the wave */
+}
+
+/* -- THE ICONS LAYOUT -- */
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Pushes left and right sides apart */
+    align-items: center;
+    height: 100%; /* Fills the 60px solid white bar */
+    padding: 0 5vw;
+}
+
+.left-links, .right-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    font-family: Archivo;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.2s;
+}
+
+.nav-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-icon:hover {
+    transform: scale(1.05);
+    color: #ff00ff;
+}
+
+/* -- PUSHING CONTENT DOWN -- */
+.scroll-container {
+    /* The 60px bar naturally pushes this down now. 
+       We only need to add enough margin to clear the hanging wave. */
+    margin-top: 10vw; 
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure the stars start at the top of the newly pushed-down container */
+.corner-left {
+    left: 2vw;        
+    position: absolute; 
+    top: 0vw; /* Changed from -4vw so it doesn't clip into the wave */
+    width: 18vw;        
+    z-index: 500;
+}
+
+.corner-right {
+    right: 2vw;       
+    position: absolute; 
+    top: 0vw; /* Changed from -4vw so it doesn't clip into the wave */
+    width: 18vw;        
+    z-index: 500;
+}
+
+
 
 h1 {
     font-size: 12vw;
@@ -85,29 +173,3 @@ p1 {
     width: 90%;
 }
 
-
-
-.top-block {
-    background-color: white; /* Match this to your SVG color */
-    width: 100%;
-    padding: 20px 0;
-}
-
-.wave-divider {
-    width: 100%;
-    /* Set the height to match the height of your SVG tile */
-    height: 50px; 
-    
-    /* Link your custom SVG here */
-    background-image: url("your-wave-file.svg");
-    
-    /* This makes it repeat forever to the right */
-    background-repeat: repeat-x;
-    
-    /* This controls how wide each 'wave' is. 
-       Adjust this to match your SVG's actual width */
-    background-size: 100px 50px; 
-    
-    /* Ensures it sits perfectly against the header */
-    margin-top: -1px; 
-}
