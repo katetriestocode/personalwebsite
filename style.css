@@ -19,36 +19,36 @@ body {
     position: relative; 
     min-height: 100vh;
     padding-top: 0vw; 
-    background-attachment: fixed; /* This keeps the BG still */
+    background-attachment: fixed; 
     margin: 0;
     overflow-x: hidden;
 }
 
 .top-tab {
-    position: relative; /* Changed from fixed so it scrolls with the page */
+    position: relative; 
     top: 0;
     left: 0;
     background: white;
     width: 100%;
     z-index: 1000;
-    height: 60px; /* Solid white part */
+    height: 60px; 
 }
 .wave-bottom {
     position: absolute;
-    top: 100%; /* Places it exactly at the bottom of the white bar */
+    top: 100%; 
     left: 0;
     width: 100%;
     height: auto;
-    pointer-events: none; /* Makes sure you can click things under the wave */
+    pointer-events: none; 
 }
 
-/* -- THE ICONS LAYOUT -- */
+
 .nav-container {
     display: flex;
-    justify-content: space-between; /* Pushes left and right sides apart */
+    justify-content: space-between;
     align-items: center;
-    height: 100%; /* Fills the 60px solid white bar */
-    padding: 0 5vw;
+    height: 100%; 
+    padding: 0.7vw 6vw;
 }
 
 .left-links, .right-links {
@@ -79,20 +79,17 @@ body {
     color: #ff00ff;
 }
 
-/* -- PUSHING CONTENT DOWN -- */
+
 .scroll-container {
-    /* The 60px bar naturally pushes this down now. 
-       We only need to add enough margin to clear the hanging wave. */
     margin-top: 10vw; 
     position: relative;
     z-index: 1;
 }
 
-/* Ensure the stars start at the top of the newly pushed-down container */
 .corner-left {
     left: 2vw;        
     position: absolute; 
-    top: 0vw; /* Changed from -4vw so it doesn't clip into the wave */
+    top: 0vw; 
     width: 18vw;        
     z-index: 500;
 }
@@ -100,7 +97,7 @@ body {
 .corner-right {
     right: 2vw;       
     position: absolute; 
-    top: 0vw; /* Changed from -4vw so it doesn't clip into the wave */
+    top: 0vw; 
     width: 18vw;        
     z-index: 500;
 }
@@ -173,3 +170,12 @@ p1 {
     width: 90%;
 }
 
+h3 {
+    font-size: 1;
+    padding-top: 0vw;
+    padding-bottom: 0vw;
+    font-family: Archivo;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: black;
+}
