@@ -19,36 +19,36 @@ body {
     position: relative; 
     min-height: 100vh;
     padding-top: 0vw; 
-    background-attachment: fixed; /* This keeps the BG still */
+    background-attachment: fixed; 
     margin: 0;
     overflow-x: hidden;
 }
 
 .top-tab {
-    position: relative; /* Changed from fixed so it scrolls with the page */
+    position: relative; 
     top: 0;
     left: 0;
     background: white;
     width: 100%;
     z-index: 1000;
-    height: 60px; /* Solid white part */
+    height: 60px; 
 }
 .wave-bottom {
     position: absolute;
-    top: 100%; /* Places it exactly at the bottom of the white bar */
+    top: 100%; 
     left: 0;
     width: 100%;
     height: auto;
-    pointer-events: none; /* Makes sure you can click things under the wave */
+    pointer-events: none; 
 }
 
-/* -- THE ICONS LAYOUT -- */
+
 .nav-container {
     display: flex;
-    justify-content: space-between; /* Pushes left and right sides apart */
+    justify-content: space-between;
     align-items: center;
-    height: 100%; /* Fills the 60px solid white bar */
-    padding: 0 5vw;
+    height: 100%; 
+    padding: 0.7vw 6vw;
 }
 
 .left-links, .right-links {
@@ -79,20 +79,17 @@ body {
     color: #ff00ff;
 }
 
-/* -- PUSHING CONTENT DOWN -- */
+
 .scroll-container {
-    /* The 60px bar naturally pushes this down now. 
-       We only need to add enough margin to clear the hanging wave. */
     margin-top: 10vw; 
     position: relative;
     z-index: 1;
 }
 
-/* Ensure the stars start at the top of the newly pushed-down container */
 .corner-left {
     left: 2vw;        
     position: absolute; 
-    top: 0vw; /* Changed from -4vw so it doesn't clip into the wave */
+    top: 0vw; 
     width: 18vw;        
     z-index: 500;
 }
@@ -100,7 +97,7 @@ body {
 .corner-right {
     right: 2vw;       
     position: absolute; 
-    top: 0vw; /* Changed from -4vw so it doesn't clip into the wave */
+    top: 0vw; 
     width: 18vw;        
     z-index: 500;
 }
@@ -133,7 +130,7 @@ h1 {
     justify-content: center;
     gap: 5vw; /* Space between image and text */
     max-width: 90vw; /* Keeps it from getting too wide on big screens */
-    margin: 2vw auto; /* Centers the whole block and adds space above/below */
+    margin: 2vw auto 10vw auto; /* Added 10vw to the bottom margin here */
     padding: 0 8vw;
     text-align: left; /* Overrides the body's center alignment for this section */
 }
@@ -173,3 +170,84 @@ p1 {
     width: 90%;
 }
 
+h3 {
+    font-size: 1;
+    padding-top: 0vw;
+    padding-bottom: 0vw;
+    font-family: Archivo;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: black;
+}
+
+
+.split-section2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw; /* Space between image and text */
+    max-width: 90vw; /* Keeps it from getting too wide on big screens */
+    margin: 2vw auto 10vw auto; /* Added 10vw to the bottom margin here */
+    padding: 0 8vw;
+    text-align: left; /* Overrides the body's center alignment for this section */
+}
+
+.split-text2 {
+    flex: 1; /* Makes the text take up the remaining space */
+}
+
+.image-scatter {
+    position: relative;
+    width: 60vw; /* Total width of the "messy pile" */
+    height: 40vw; /* Total height of the "messy pile" */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scatter-photo {
+    position: absolute;
+    width: 15vw; /* Size of individual polaroids */
+    height: auto;
+    background: white; /* Optional: adds a polaroid border feel */
+    padding: 5px 5px 30px 5px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.scatter-photo:hover {
+    transform: scale(1.1) rotate(0deg) !important;
+    z-index: 100 !important;
+}
+
+.scatter-photo:nth-child(1) { top: 5vw; left: -3vw; transform: rotate(-10deg); z-index: 1; }
+.scatter-photo:nth-child(2) { top: 5vw; left: 24vw; transform: rotate(8deg); z-index: 2; }
+.scatter-photo:nth-child(3) { top: 15vw; left: 2vw; transform: rotate(5deg); z-index: 3; }
+.scatter-photo:nth-child(4) { top: 10vw; left: 47vw; transform: rotate(10deg); z-index: 3; }
+.scatter-photo:nth-child(5) { top: 20vw; left: 15vw; transform: rotate(-8deg); z-index: 5; }
+.scatter-photo:nth-child(6) { top: 2vw; left: 10vw; transform: rotate(5deg); z-index: 0; }
+.scatter-photo:nth-child(7) { top: 18vw; left: 30vw; transform: rotate(15deg); z-index: 2; }
+.scatter-photo:nth-child(8) { top: 2vw; left: 40vw; transform: rotate(-12deg); z-index: 1; }
+
+
+.split-section3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0vw; /* Space between image and text */
+}
+.dinoatwork {
+    position: center;
+    width: 18vw;        
+}
+
+p2 {
+    font-size: 2.5vw;
+    padding-top: 0vw;
+    padding-bottom: 0vw;
+    line-height: 3vw;
+    font-family: Archivo;
+    margin-top: 0;
+    margin-bottom: 0;
+}
