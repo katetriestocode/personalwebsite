@@ -251,3 +251,62 @@ p2 {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+.split-section4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw; /* Space between image and text */
+    max-width: 90vw; /* Keeps it from getting too wide on big screens */
+    margin: 2vw auto 10vw auto; /* Added 10vw to the bottom margin here */
+    padding: 0 8vw;
+    text-align: left; /* Overrides the body's center alignment for this section */
+}
+
+.split-text4 {
+    flex: 1; /* Makes the text take up the remaining space */
+}
+
+.image-scatter2 {
+    position: relative;
+    width: 60vw; /* Total width of the "messy pile" */
+    height: 40vw; /* Total height of the "messy pile" */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-scatter {
+    position: relative;
+    width: 60vw; /* Total width of the "messy pile" */
+    height: 40vw; /* Total height of the "messy pile" */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scatter-photo2 {
+    position: absolute;
+    width: 15vw; /* Size of individual polaroids */
+    height: auto;
+    background: white; /* Optional: adds a polaroid border feel */
+    padding: 5px 5px 5px 5px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.scatter-photo2:hover {
+    transform: scale(1.1) rotate(0deg) !important;
+    z-index: 100 !important;
+}
+
+.scatter-photo2:nth-child(1) { top: 5vw; left: -3vw; transform: rotate(-10deg); z-index: 1; }
+.scatter-photo2:nth-child(2) { top: 5vw; left: 24vw; transform: rotate(8deg); z-index: 2; }
+.scatter-photo2:nth-child(3) { top: 15vw; left: 2vw; transform: rotate(5deg); z-index: 3; }
+.scatter-photo2:nth-child(4) { top: 10vw; left: 47vw; transform: rotate(10deg); z-index: 3; }
+.scatter-photo2:nth-child(5) { top: 20vw; left: 15vw; transform: rotate(-8deg); z-index: 5; }
+.scatter-photo2:nth-child(6) { top: 2vw; left: 10vw; transform: rotate(5deg); z-index: 0; }
+.scatter-photo2:nth-child(7) { top: 18vw; left: 30vw; transform: rotate(15deg); z-index: 2; }
+.scatter-photo2:nth-child(8) { top: 2vw; left: 40vw; transform: rotate(-12deg); z-index: 1; }
+
